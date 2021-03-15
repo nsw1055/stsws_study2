@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;org.clazh.aop&apos; to &apos;board/src/main/java/org.clazh&apos;&#x0D;&#x0A;- Original project: &apos;aop&apos;&#x0D;&#x0A;- Destination element: &apos;board/src/main/java/org.clazh&apos;&#x0D;&#x0A;- Original element: &apos;aop/src/main/java/org.clazh.aop&apos;" description="Copy package" destination="=board/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.clazh" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.clazh.aop" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1615781603807" version="1.0"/>
+</session>

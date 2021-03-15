@@ -1,0 +1,28 @@
+package org.clazh.service;
+
+import org.springframework.stereotype.Service;
+
+import lombok.extern.log4j.Log4j;
+
+@Service
+@Log4j
+public class SampleServicImpl implements SampleService {
+
+	@Override
+	public String doA() {
+		log.info("doA..............");
+		return "doA";
+	}
+	
+	@Override
+	public String doB() {
+		log.info("doB..............");
+		return "doB";
+	}
+
+	@Override
+	public String doC() {
+		log.info("doC..............");
+		return "doC";
+	}
+}

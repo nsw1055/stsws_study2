@@ -1,0 +1,5 @@
+package org.clazh.service;
+
+public class SampleService {
+
+}

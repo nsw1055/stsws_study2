@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.clazh.board.mapper.BoardMapper">
+
+	<select id="getList" resultType="org.clazh.board.domain.Board">
+		select * from tbl_board
+		<where>
+			<if test="arr != null">
+				<foreach collection="arr" item="item" separator="OR"
+					open="(" close=")">
+
+					<if test="item == 't'.toString()">
+						title like concat('%' #{keyword}, '%')
+					</if>
+					<if test="item == 'c'.toString()">
+						content like concat('%' #{keyword}, '%')
+					</if>
+					<if test="item == 'w'.toString()">
+						writer like concat('%' #{keyword}, '%')
+					</if>
+
+				</foreach>
+			</if>
+		</where>
+
+		order by bno desc limit #{skip}, #{count}
+	</select>
+
+	<select id="totalCount" resultType="int">
+		select count(bno) from
+		tbl_board
+		<where>
+			<if test="arr != null">
+				<foreach collection="arr" item="item" separator="OR"
+					open="(" close=")">
+
+					<if test="item == 't'.toString()">
+						title like concat('%' #{keyword}, '%')
+					</if>
+					<if test="item == 'c'.toString()">
+						content like concat('%' #{keyword}, '%')
+					</if>
+					<if test="item == 'w'.toString()">
+						writer like concat('%' #{keyword}, '%')
+					</if>
+
+				</foreach>
+			</if>
+		</where>
+	</select>
+	
+	<select id = "selectOne" resultType="org.clazh.board.domain.Board">
+		select * from tbl_board where bno = #{bno}
+	</select>
+	
+	<delete id="deleteOne" >
+		delete from tbl_board where bno = #{bno}
+	</delete>
+
+</mapper>

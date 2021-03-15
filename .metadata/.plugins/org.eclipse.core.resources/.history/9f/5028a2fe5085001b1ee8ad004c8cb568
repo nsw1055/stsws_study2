@@ -1,0 +1,11 @@
+package org.clazh.service;
+
+import org.springframework.transaction.annotation.Transactional;
+
+@Transactional
+public interface SampleService {
+	
+	public String doA();
+	public String doB();
+	public String doC();
+}

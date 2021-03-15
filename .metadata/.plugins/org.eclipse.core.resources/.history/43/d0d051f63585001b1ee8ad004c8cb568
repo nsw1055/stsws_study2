@@ -1,0 +1,6 @@
+package org.clazh.service;
+
+public interface SampleService {
+	
+	public String doA();
+}

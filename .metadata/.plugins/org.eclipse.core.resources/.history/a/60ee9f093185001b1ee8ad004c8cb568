@@ -1,0 +1,5 @@
+package org.clazh.aop;
+
+public class LogAdvice {
+
+}
