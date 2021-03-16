@@ -2,7 +2,7 @@
 웹설계의 우수성에 비해 제대로 사용되어지지 못했었다(GET방식, POST방식외에도 다른 방식들이 많았지만 사용하지 않았다)
 그래서 REST를 만듦
 
-1. 구성
+1. 구성  
  (1) 자원 - URI   
    /board/read?{bno=123}  
    ( URI, URL )?(파라미터)  
@@ -68,8 +68,122 @@
 ```
 
 7. 어노테이션
- 1) @RestController : REST방식이라고 명시
+ 1) @RestController : REST방식 컨트롤러 ResponseBody가 자동으로 들어감
  2) @RestponseBody : 뷰로 전달하는 것이 아니라 데이터 자체를 전달
  3) @PathVariable : URL 경로에 있는 값을 파라미터로 추출
  4) @CrossOrigin : json cors처리
  5) @RequestBody : Json Xml데이터 처리
+
+* 맛보기 코드
+
+1. /domain/SampleDTO.java 
+```
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class SampleDTO {
+
+	private Integer sno;
+	private String first;
+	private String last;
+}
+```
+
+2. /controller/SampleController.java
+```
+@RestController
+@Log4j
+@RequestMapping("/sample")
+public class SampleController {
+  
+	//consumes 받을때 어떤형식만 받겠다 produces 어떤 형태만 만들겠다. (두가지를 사용하면 엄격해진다)
+	@GetMapping(value = "/get1", produces = {MediaType.APPLICATION_JSON_VALUE} )
+	public ResponseEntity<SampleDTO> getSample() {
+		
+		SampleDTO result = new SampleDTO(11,"노","승원");
+		
+		return new ResponseEntity<SampleDTO>(result, HttpStatus.OK);
+	}
+}
+```  
+![image](https://user-images.githubusercontent.com/72544949/111245145-83fb0c00-8647-11eb-835b-3b757ba43068.png)
+
+3. SampleController.java (POST)
+```
+@RestController
+@Log4j
+@RequestMapping("/samples")
+public class SampleController {
+	
+	@PostMapping("")
+	public ResponseEntity<SampleDTO> postSample(@RequestBody SampleDTO dto){
+		
+		log.info(dto);
+		
+		return new ResponseEntity<SampleDTO>(dto, HttpStatus.OK);
+	}
+```  
+![image](https://user-images.githubusercontent.com/72544949/111246155-1f40b100-8649-11eb-91fd-b8e2fd1ad8f3.png)  
+![image](https://user-images.githubusercontent.com/72544949/111246163-249dfb80-8649-11eb-8af7-ac0bdcb71e98.png)  
+
+4. @PathVariable
+```
+@RestController
+@Log4j
+@RequestMapping("/samples")
+public class SampleController {
+	
+	@PostMapping("/{cat}")
+	public ResponseEntity<SampleDTO> postSample(
+			@PathVariable(name ="cat") Long cat, 
+			@RequestParam(name="perSheet") Integer perSheet,
+			@RequestBody SampleDTO dto){
+		
+		log.info("cat: " +cat);
+		log.info("perSheet: " + perSheet);
+		log.info(dto);
+		
+		return new ResponseEntity<SampleDTO>(dto, HttpStatus.OK);
+	}
+```  
+![image](https://user-images.githubusercontent.com/72544949/111247812-05ed3400-864c-11eb-9d3d-33f30c1bcc29.png)  
+![image](https://user-images.githubusercontent.com/72544949/111247799-fff75300-864b-11eb-8aa1-f6f0c4ba3e8b.png)
+
+5. @DeleteMapping
+```
+@RestController
+@Log4j
+@RequestMapping("/samples")
+public class SampleController {
+	
+	@DeleteMapping("/{sno}")
+	public ResponseEntity<Boolean> removeSample(@PathVariable(name = "sno") Integer sno){
+		
+		log.info("SNO: " + sno);
+		return new ResponseEntity<Boolean>(true,HttpStatus.OK);
+	}
+```
+![image](https://user-images.githubusercontent.com/72544949/111248126-a4799500-864c-11eb-99f0-ec21a50790a2.png)  
+![image](https://user-images.githubusercontent.com/72544949/111248133-a9d6df80-864c-11eb-9362-b1d3dc480fce.png)  
+
+6. @PutMapping
+```
+@RestController
+@Log4j
+@RequestMapping("/samples")
+public class SampleController {
+	
+	@PutMapping("/{sno}")
+	public ResponseEntity<SampleDTO> modify( @RequestBody SampleDTO dto){
+		
+		log.info("modify.....................");
+		log.info(dto);
+		
+		return new ResponseEntity<SampleDTO>(dto, HttpStatus.OK);
+	}
+```
+![image](https://user-images.githubusercontent.com/72544949/111248538-79437580-864d-11eb-99b3-066a887f4787.png)  
+![image](https://user-images.githubusercontent.com/72544949/111248544-7e082980-864d-11eb-8dfd-8a8fa014712c.png)  
+
+
+
