@@ -344,7 +344,7 @@ public interface SampleMapper {
 table1에는 입력이 되었지만 table2에는 입력이 되지 않았다
 이때 트랜잭션을 걸어 둘다 입력이 안되게끔 해야 한다.
 
-5. 트랜젝션 (거는위치 메서드, 인터페이스,  @Around와 함께 쓰면 트랜젝션이 안걸리므로 조심히 써야 한다.(custom AOP를 사용해야 한다.))
+5. 트랜젝션 (거는위치 메서드, 인터페이스, 클레스  @Around와 함께 쓰면 트랜젝션이 안걸리므로 조심히 써야 한다.(custom AOP를 사용하거나 Throwable로 예외를 던져야 한다.))
 ```
 @Transactional
 	@Override
