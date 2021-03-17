@@ -19,7 +19,6 @@ public interface ReplyMapper {
 	public void update(ReplyVO vo);
 	@Delete("delete from tbl_reply where rno = #{rno}")
 	public void delete(Integer rno);
-	@Select("select * from tbl_reply where bno = #{bno} order by rno asc limit #{skip} , 10")
-	public List<ReplyVO> selectList(@Param("bno") Integer bno ,
-								    @Param("skip") int skip);
+	@Select("select * from tbl_reply where bno = #{bno} order by rno asc limit 0 , 10")
+	public List<ReplyVO> selectList(@Param("bno") Integer bno );
 }

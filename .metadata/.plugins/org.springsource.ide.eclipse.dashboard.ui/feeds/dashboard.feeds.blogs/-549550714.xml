@@ -5,7 +5,90 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-03-11T20:00:00Z</updated>
+  <updated>2021-03-16T09:29:00Z</updated>
+  <entry>
+    <title>Spring Framework 5.3.5 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/03/16/spring-framework-5-3-5-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>St?phane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2021-03-16:4384</id>
+    <updated>2021-03-16T09:29:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Framework &lt;code&gt;5.3.5&lt;/code&gt; is available now.&lt;/p&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;5.3.5&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.3.5"&gt;38 fixes and improvements&lt;/a&gt; and covers support for JDK 16 (which is scheduled for GA today), in preparation for JDK 17 LTS in September.&lt;/p&gt;
+&lt;p&gt;Stay tuned for follow-up Spring Boot releases later this week.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.3.5/spring-framework-reference"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Security 5.5.0-M3 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/03/15/spring-security-5-5-0-m3-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Eleftheria Stein-Kousathana</name>
+    </author>
+    <id>tag:spring.io,2021-03-15:4383</id>
+    <updated>2021-03-15T10:09:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the community, I¡¯m pleased to announce the release of
+Spring Security 5.5.0-M3! You can find the complete details in the &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.5.0-M3"&gt;release notes&lt;/a&gt; and the highlights below:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="oauth-2-0"&gt;&lt;a class="anchor" href="#oauth-2-0"&gt;&lt;/a&gt;OAuth 2.0&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="gh-8975-add-bearertokenauthenticationconverter"&gt;&lt;a class="anchor" href="#gh-8975-add-bearertokenauthenticationconverter"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/8975"&gt;gh-8975&lt;/a&gt; - Add BearerTokenAuthenticationConverter&lt;/h5&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="saml"&gt;&lt;a class="anchor" href="#saml"&gt;&lt;/a&gt;SAML&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="gh-9317-add-setmetadatafilename-method-to-saml2metadatafilter"&gt;&lt;a class="anchor" href="#gh-9317-add-setmetadatafilename-method-to-saml2metadatafilter"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/9317"&gt;gh-9317&lt;/a&gt; - Add setMetadataFilename method to Saml2MetadataFilter&lt;/h5&gt;
+
+&lt;/div&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="gh-9310-throw-saml2authenticationexception-in-saml2authenticationtokenconverter-on-deflation-or-decoding-error"&gt;&lt;a class="anchor" href="#gh-9310-throw-saml2authenticationexception-in-saml2authenticationtokenconverter-on-deflation-or-decoding-error"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/9310"&gt;gh-9310&lt;/a&gt; - Throw Saml2AuthenticationException in Saml2AuthenticationTokenConverter on deflation or decoding error&lt;/h5&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="acl"&gt;&lt;a class="anchor" href="#acl"&gt;&lt;/a&gt;ACL&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="gh-9425-allow-acl-to-be-owned-by-grantedauthoritysid"&gt;&lt;a class="anchor" href="#gh-9425-allow-acl-to-be-owned-by-grantedauthoritysid"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/9425"&gt;gh-9425&lt;/a&gt; - Allow ACL to be owned by GrantedAuthoritySid&lt;/h5&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="kotlin"&gt;&lt;a class="anchor" href="#kotlin"&gt;&lt;/a&gt;Kotlin&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="gh-9319-kotlin-dsl-extension-for-rememberme"&gt;&lt;a class="anchor" href="#gh-9319-kotlin-dsl-extension-for-rememberme"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/9319"&gt;gh-9319&lt;/a&gt; - Kotlin DSL extension for rememberMe&lt;/h5&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="web"&gt;&lt;a class="anchor" href="#web"&gt;&lt;/a&gt;Web&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="gh-9387-improve-httpsessionsecuritycontextrepository-performance"&gt;&lt;a class="anchor" href="#gh-9387-improve-httpsessionsecuritycontextrepository-performance"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/9387"&gt;gh-9387&lt;/a&gt; - Improve HttpSessionSecurityContextRepository performance&lt;/h5&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; |
+&lt;a href="https://docs.spring.io/spring-security/site/docs/5.5.0-M3/reference/html5/"&gt;Reference&lt;/a&gt;
+| &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: FF4J project creator and DataStax Astra SDK engineer Cedrick Lunven</title>
     <link rel="alternate" href="https://spring.io/blog/2021/03/11/a-bootiful-podcast-ff4j-project-creator-and-datastax-astra-sdk-engineer-cedrick-lunven" />
@@ -671,59 +754,6 @@ Artem&lt;/p&gt;
   &lt;li&gt;Spring Data Couchbase 3.2.13 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/3.2.13.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/3.2.13.RELEASE/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/3.2.13.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://github.com/spring-projects/spring-data-couchbase/releases/tag/3.2.13.RELEASE"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Spring Data for Apache Solr 4.1.13 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/4.1.13.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/solr/docs/4.1.13.RELEASE/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/solr/docs/4.1.13.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://github.com/spring-projects/spring-data-solr/releases/tag/4.1.13.RELEASE"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - February 16th, 2021</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/02/16/this-week-in-spring-february-16th-2021" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-02-16:4364</id>
-    <updated>2021-02-16T19:23:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week is fixing to be a really fun one! &lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll be speaking at the &lt;a href="https://www.meetup.com/seajug/events/276135388/"&gt;&lt;strong&gt;Seattle JUG&lt;/strong&gt; tonight&lt;/a&gt;. It&amp;rsquo;s free, online, virtual, etc. Join us, won&amp;rsquo;t you? &lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll also be speaking at the legendary &lt;a href="http://DevNexus.com"&gt;&lt;strong&gt;Devnexus&lt;/strong&gt;&lt;/a&gt; event this week. Do &lt;em&gt;not&lt;/em&gt; miss that. Or the show. It&amp;rsquo;s free, being held virtually, online, and a &lt;em&gt;ton of us&lt;/em&gt; from the Spring team will be there. &lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;ve got a lot of good stuff to get to this week so let&amp;rsquo;s dive in!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;My buddy, the amazing and inestimable, Tanzu observability engineer Tommy Ludwig, and I wrote a little blog, &lt;a href="https://spring.io/blog/2021/02/09/metrics-and-tracing-better-together"&gt;&lt;em&gt;Metrics and Tracing: Better Together&lt;/em&gt;&lt;/a&gt;. It&amp;rsquo;s chock full of Tommy&amp;rsquo;s brilliance and my terrible terrible puns. Don&amp;rsquo;t miss it!&lt;/li&gt;
-  &lt;li&gt;In last week&amp;rsquo;s installment of &lt;a href="https://spring.io/blog/2021/02/11/a-bootiful-podcast-doordash-tech-lead-manager-zohaib-sibte-hassan-on-spring-boot-kotlin-grpc-and-more"&gt;&lt;em&gt;A Bootiful Podcast&lt;/em&gt;, I talked to Doordash tech lead manager Zohaib Sibte Hassan on Spring Boot, Kotlin, GRPC, and more&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blogs.vmware.com/opensource/2021/02/09/an-open-source-approach-to-decentralized-transactions/"&gt;An Open Source Approach to Decentralized Transactions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This looks cool: a way to &lt;a href="https://twitter.com/serceman/status/1359477990501937156?s=12"&gt;inspect RSocket frames from within Chrome&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blogs.vmware.com/opensource/2021/02/11/musings-on-supply-chain-security/"&gt;Musings on Supply Chain Security&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/modern-apps"&gt;Paving the Road to Modern Apps, by VMware Tanzu&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://rieckpil.de/testing-spring-boot-applications-masterclass/"&gt;Philip Riecks has an interesting new tutorial, &lt;em&gt;Testing Spring Boot Applications Masterclass&lt;/em&gt;, for sale.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/11/spring-authorization-server-0-1-0-available-now"&gt;Spring Authorization Server 0.1.0 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/11/spring-cloud-hoxton-sr10-has-been-released"&gt;Spring Cloud Hoxton.SR10 has been released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/16/spring-framework-5-3-4-and-5-2-13-available-now"&gt;Spring Framework 5.3.4 and 5.2.13 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/11/spring-security-5-4-4-5-3-8-and-5-2-9-released"&gt;Spring Security 5.4.4, 5.3.8, and 5.2.9 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/16/spring-vault-2-3-1-available"&gt;Spring Vault 2.3.1 available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/VMware/status/1360490905782931456"&gt;Mark your calendar for these 2021 VMware conferences - SpringOne, VMworld, CloudLIVE, Connect. &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Vault 2.3.1 available</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/02/16/spring-vault-2-3-1-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mark Paluch</name>
-    </author>
-    <id>tag:spring.io,2021-02-16:4363</id>
-    <updated>2021-02-16T15:18:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the community, I&amp;#8217;d like to announce the availability of the Spring Vault service release &lt;code&gt;2.3.1&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release ships with mostly bugfixes, dependency upgrades, and selected features.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For a complete list of changes, see the &lt;a href="https://github.com/spring-projects/spring-vault/releases/tag/2.3.1"&gt;2.3.1 changelog&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-vault/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-vault"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-vault/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-vault/releases/tag/2.3.1"&gt;Release &lt;code&gt;2.3.1&lt;/code&gt; on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-vault/docs/2.3.1/reference/html/"&gt;Documentation for &lt;code&gt;2.3.1&lt;/code&gt;&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-vault"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

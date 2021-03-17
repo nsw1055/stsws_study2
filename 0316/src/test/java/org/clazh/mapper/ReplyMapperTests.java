@@ -59,7 +59,7 @@ public class ReplyMapperTests {
 	@Test
 	public void testList() {
 		
-		mapper.selectList(509, 0).forEach(reply -> log.info(reply));
+//		mapper.selectList(509, 0).forEach(reply -> log.info(reply));
 		
 	}
 	
