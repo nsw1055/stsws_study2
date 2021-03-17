@@ -1,7 +1,6 @@
 INDEX VERSION 1.131+C:\Users\nsw10\Documents\stsws_study2\.metadata\.plugins\org.eclipse.jdt.core
-3816757528.index
-3827360916.index
-2262761911.index
 1542113349.index
-1518650096.index
+3827360916.index
 1425716597.index
+2262761911.index
+2468860930.index

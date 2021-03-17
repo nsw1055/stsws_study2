@@ -179,7 +179,13 @@
 			<version>1.9.6</version>
 		</dependency>
 
-
+		<!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
+<dependency>
+    <groupId>net.coobird</groupId>
+    <artifactId>thumbnailator</artifactId>
+    <version>0.4.14</version>
+</dependency>
+		
 
 	</dependencies>
 	<build>
