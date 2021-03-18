@@ -7,14 +7,41 @@ pageEncoding="UTF-8"%>
     <title>Insert title here</title>
 </head>
 <body>
-<input type='file' name='uploadFile' multiple="multiple">
-<button id ="uploadBtn">Upload</button>
+<hr/>
+<button id="saveBtn">Register</button>
+<hr/>
+<hr/>
 
+<div class="inputDiv">
+<input type='file' name='uploadFile'  multiple="multiple">
+<button id="uploadBtn">Upload</button>
+</div>
 <ul class="uploadResult">
 </ul>
 
-
 <script>
+
+    document.querySelector("#saveBtn")
+        .addEventListener("click", function(e){
+
+
+
+            const obj  = {
+                title:"Title",
+                content:"Content",
+                writer:"user00",
+                fileList: arr}
+
+            fetch("/board/register",
+                {
+                    method: 'post',
+                    headers: {'Content-type': 'application/json; charset=UTF-8'},
+                    body: JSON.stringify(obj)
+                })
+
+        }, false);
+    const arr = []
+
 	const uploadUL = document.querySelector(".uploadResult")
 
     const inputOri = document.querySelector("input[name='uploadFile']");
@@ -47,6 +74,7 @@ pageEncoding="UTF-8"%>
         	let htmlCode = "";
         	for (let i = 0; i < jsonObj.length; i++) {
 				let fileObj = jsonObj[i];
+                arr.push(fileObj)
 				console.log(fileObj.thumbLink)
 				htmlCode += "<li id ='li_"+fileObj.uuid+"'><img src='/view?file="+fileObj.thumbLink+"'><button onclick='removeFile("+JSON.stringify(fileObj)+")'>DEL</button></li>"
 			}
@@ -54,7 +82,7 @@ pageEncoding="UTF-8"%>
 
             document.querySelector("input[name='uploadFile']").remove();
 
-            document.querySelector("body").insertAdjacentHTML('afterbegin', cloneInput);
+            document.querySelector(".inputDiv").insertAdjacentHTML('afterbegin', cloneInput);
 
             // console.dir(document.querySelector("input[name='uploadFile']"))
         })
