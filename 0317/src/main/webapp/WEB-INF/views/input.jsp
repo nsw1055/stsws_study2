@@ -7,9 +7,10 @@ pageEncoding="UTF-8"%>
     <title>Insert title here</title>
 </head>
 <body>
+<div class = "inputDiv">
 <input type='file' name='uploadFile' multiple="multiple">
 <button id ="uploadBtn">Upload</button>
-
+</div>
 <ul class="uploadResult">
 </ul>
 
@@ -17,12 +18,18 @@ pageEncoding="UTF-8"%>
 <script>
 	const uploadUL = document.querySelector(".uploadResult")
 
+    const input = document.querySelector("input[name='uploadFile']");
+
+    const cloneInput = document.querySelector("input[name='uploadFile']").outerHTML
+
+    console.dir(input.outerHTML)
+
+
+
     document.querySelector("#uploadBtn").addEventListener("click", function(){
 
         const formData = new FormData();
 
-        const input = document.querySelector("input[name='uploadFile']");
-        
         const files = input.files;
 
         console.dir(input);
@@ -43,11 +50,18 @@ pageEncoding="UTF-8"%>
 				fileObj = jsonObj[i];
 				console.log(fileObj.thumbLink)
 				htmlCode += "<li><img src='/view?file="+fileObj.thumbLink+"'></li>"
-				
+
+
 			}
         	uploadUL.innerHTML+= htmlCode;
+
+                document.querySelector("input[name='uploadFile']").remove()
+
+                document.querySelector(".inputDiv").insertAdjacentHTML('afterbegin', cloneInput)
         })
-		
+
+
+
     }, false)
 
 </script>
