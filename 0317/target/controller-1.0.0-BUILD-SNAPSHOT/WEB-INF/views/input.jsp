@@ -7,10 +7,9 @@ pageEncoding="UTF-8"%>
     <title>Insert title here</title>
 </head>
 <body>
-<div class = "inputDiv">
 <input type='file' name='uploadFile' multiple="multiple">
 <button id ="uploadBtn">Upload</button>
-</div>
+
 <ul class="uploadResult">
 </ul>
 
@@ -18,21 +17,21 @@ pageEncoding="UTF-8"%>
 <script>
 	const uploadUL = document.querySelector(".uploadResult")
 
-    const input = document.querySelector("input[name='uploadFile']");
+    const inputOri = document.querySelector("input[name='uploadFile']");
 
-    const cloneInput = document.querySelector("input[name='uploadFile']").outerHTML
+    const cloneInput = inputOri.outerHTML
 
-    console.dir(input.outerHTML)
+    // console.dir(inputOri.outerHTML)
 
 
 
     document.querySelector("#uploadBtn").addEventListener("click", function(){
-
+        const input = document.querySelector("input[name='uploadFile']");
         const formData = new FormData();
 
         const files = input.files;
 
-        console.dir(input);
+        // console.dir(input);
 
         for(let i = 0; i < files.length; i++){
             formData.append("files", files[i]);
@@ -43,26 +42,35 @@ pageEncoding="UTF-8"%>
             body: formData
         }).then(res => res.json())
             .then(jsonObj => {
-        	console.log(jsonObj)
+        	// console.log(jsonObj)
         	
         	let htmlCode = "";
         	for (let i = 0; i < jsonObj.length; i++) {
-				fileObj = jsonObj[i];
+				let fileObj = jsonObj[i];
 				console.log(fileObj.thumbLink)
-				htmlCode += "<li><img src='/view?file="+fileObj.thumbLink+"'></li>"
-
-
+				htmlCode += "<li id ='li_"+fileObj.uuid+"'><img src='/view?file="+fileObj.thumbLink+"'><button onclick='removeFile("+JSON.stringify(fileObj)+")'>DEL</button></li>"
 			}
         	uploadUL.innerHTML+= htmlCode;
 
-                document.querySelector("input[name='uploadFile']").remove()
+            document.querySelector("input[name='uploadFile']").remove();
 
-                document.querySelector(".inputDiv").insertAdjacentHTML('afterbegin', cloneInput)
+            document.querySelector("body").insertAdjacentHTML('afterbegin', cloneInput);
+
+            // console.dir(document.querySelector("input[name='uploadFile']"))
         })
-
-
-
     }, false)
+
+    function removeFile(param) {
+        console.log(param)
+
+        fetch("/removeFile",
+            {
+             method: 'delete',
+             headers: {'Content-type': 'application/json; charset=UTF-8'},
+             body: JSON.stringify(param)
+            })
+        document.querySelector("#li_"+ param.uuid).remove()
+    }
 
 </script>
 </body>

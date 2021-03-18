@@ -15,10 +15,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.FileCopyUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.clazh.dto.AttachFileDTO;
 
@@ -31,7 +28,7 @@ public class UploadController {
 	
 	@GetMapping("/view")
 	public ResponseEntity<byte[]> viewFile(String file){
-		
+
 		byte[] result = null;
 		
 		ResponseEntity<byte[]> res = null;
@@ -66,6 +63,30 @@ public class UploadController {
 		
 		
 		return res;
+	}
+	//415
+	@DeleteMapping("/removeFile")
+	public ResponseEntity<String> removeFile(@RequestBody AttachFileDTO dto){
+
+		log.info(dto);
+
+		log.info("remove.............");
+
+		String filePath = "C:\\upload\\" + dto.getUploadPath();
+		String fileName = dto.getUuid()+"_"+dto.getFileName();
+
+		if(dto.isImage()) {
+
+			File thumb = new File(filePath+File.separator+"s_"+fileName);
+			thumb.delete();
+
+		}
+
+		File target = new File(filePath+File.separator+fileName);
+		target.delete();
+
+
+		return new ResponseEntity<String>("success", HttpStatus.OK);
 	}
 
 	@PostMapping("/upload")
