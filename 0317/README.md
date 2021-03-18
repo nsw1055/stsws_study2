@@ -665,3 +665,196 @@ public ResponseEntity<String> removeFile(@RequestBody AttachFileDTO dto){
 		return new ResponseEntity<String>("success", HttpStatus.OK);
 	}
 ```
+---
+복합 업로드 데이터 수집 공부
+
+1. BoardDTO.java
+```
+@Data
+public class BoardDTO {
+    private Integer bno;
+    private String title, content,writer;
+    private List<AttachFileDTO> fileList;
+}
+```
+2. BoardController.java
+```
+@Controller
+@RequestMapping("/board")
+@Log4j
+public class BoardController {
+
+    @GetMapping("/register")
+    public void registerGet() {
+
+    }
+
+    @PostMapping("/register")
+    @ResponseBody
+    public String registerPost(@RequestBody BoardDTO dto) {
+
+        log.info("post...................");
+        log.info(dto);
+
+        return "success";
+    }
+}
+```
+
+3. register.jsp 접속 확인
+```
+<button id="saveBtn">register</button>
+
+<script>
+
+    document.querySelector("#saveBtn").addEventListener("click", function (e) {
+
+        const obj = {title: "title", content:"Content", writer:"user00"}
+
+        fetch("/board/register",
+            {
+                method: 'post',
+                headers: {'Content-type': 'application/json; charset=UTF-8'},
+                body: JSON.stringify(obj)
+            })
+
+    }, false);
+
+</script>
+```
+
+4. 전송
+```
+<script>
+
+    document.querySelector("#saveBtn").addEventListener("click", function (e) {
+
+        const arr = [
+            {fileName : "aaa.jpg", uuid:"11111", uploadPath:"2021/03/18"},
+            {fileName : "bbb.jpg", uuid:"222222", uploadPath:"2021/03/18"}
+        ]
+
+        const obj = {
+            title: "title",
+            content:"Content",
+            writer:"user00",
+            fileList: arr}
+
+        fetch("/board/register",
+            {
+                method: 'post',
+                headers: {'Content-type': 'application/json; charset=UTF-8'},
+                body: JSON.stringify(obj)
+            })
+
+    }, false);
+
+</script>
+```
+5. 코드 합체
+```
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<hr/>
+<button id="saveBtn">Register</button>
+<hr/>
+<hr/>
+
+<div class="inputDiv">
+<input type='file' name='uploadFile'  multiple="multiple">
+<button id="uploadBtn">Upload</button>
+</div>
+<ul class="uploadResult">
+</ul>
+
+<script>
+
+    document.querySelector("#saveBtn")
+        .addEventListener("click", function(e){
+
+
+
+            const obj  = {
+                title:"Title",
+                content:"Content",
+                writer:"user00",
+                fileList: arr}
+
+            fetch("/board/register",
+                {
+                    method: 'post',
+                    headers: {'Content-type': 'application/json; charset=UTF-8'},
+                    body: JSON.stringify(obj)
+                })
+
+        }, false);
+    const arr = []
+
+	const uploadUL = document.querySelector(".uploadResult")
+
+    const inputOri = document.querySelector("input[name='uploadFile']");
+
+    const cloneInput = inputOri.outerHTML
+
+    // console.dir(inputOri.outerHTML)
+
+
+
+    document.querySelector("#uploadBtn").addEventListener("click", function(){
+        const input = document.querySelector("input[name='uploadFile']");
+        const formData = new FormData();
+
+        const files = input.files;
+
+        // console.dir(input);
+
+        for(let i = 0; i < files.length; i++){
+            formData.append("files", files[i]);
+        }
+        
+        fetch("/upload",{
+            method: "post",
+            body: formData
+        }).then(res => res.json())
+            .then(jsonObj => {
+        	// console.log(jsonObj)
+        	
+        	let htmlCode = "";
+        	for (let i = 0; i < jsonObj.length; i++) {
+				let fileObj = jsonObj[i];
+                arr.push(fileObj)
+				console.log(fileObj.thumbLink)
+				htmlCode += "<li id ='li_"+fileObj.uuid+"'><img src='/view?file="+fileObj.thumbLink+"'><button onclick='removeFile("+JSON.stringify(fileObj)+")'>DEL</button></li>"
+			}
+        	uploadUL.innerHTML+= htmlCode;
+
+            document.querySelector("input[name='uploadFile']").remove();
+
+            document.querySelector(".inputDiv").insertAdjacentHTML('afterbegin', cloneInput);
+
+            // console.dir(document.querySelector("input[name='uploadFile']"))
+        })
+    }, false)
+
+    function removeFile(param) {
+        console.log(param)
+
+        fetch("/removeFile",
+            {
+             method: 'delete',
+             headers: {'Content-type': 'application/json; charset=UTF-8'},
+             body: JSON.stringify(param)
+            })
+        document.querySelector("#li_"+ param.uuid).remove()
+    }
+
+</script>
+</body>
+```
