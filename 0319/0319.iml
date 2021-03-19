@@ -25,7 +25,11 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Security Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring/security-context.xml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
@@ -79,5 +83,10 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.9.6" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.6" level="project" />
     <orderEntry type="library" name="Maven: net.coobird:thumbnailator:0.4.14" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.4.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:5.4.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:5.4.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-taglibs:5.4.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-acl:5.4.2" level="project" />
   </component>
 </module>

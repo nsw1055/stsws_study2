@@ -47,6 +47,11 @@
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.9.6" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.6" />
           <element id="library" level="project" name="Maven: net.coobird:thumbnailator:0.4.14" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.4.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.4.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.4.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:5.4.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:5.4.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
