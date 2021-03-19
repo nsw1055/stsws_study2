@@ -160,4 +160,75 @@ security-context
 ```
 ![image](https://user-images.githubusercontent.com/72544949/111727999-50221f80-88af-11eb-8b45-9dcade050ea4.png)  
 
+* 로그인 / 로그아웃  
+
+1. security-context.xml
+```
+<security:form-login login-page="/customLogin"/>
+```
+
+2. CommonController
+```
+  @GetMapping("/customLogin")
+    public void loginPage(String error, String logout, Model model) {
+        log.info("error: "+error);
+        log.info("logout: "+ logout);
+
+        //로그아웃
+        if(logout != null){
+            model.addAttribute("logout", "Logout!!!!");
+        }
+```
+3. jsp
+```
+<form action="/login" method="post">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <button>LOGIN</button>
+</form>
+```
+
+4. security-context.xml
+```
+<security:logout logout-url="/customLogout" invalidate-session="true" />
+```
+
+5. controller
+```
+ @GetMapping("/customLogout")
+    public void customLogout(){
+    }
+```
+
+6. logout확인
+
+* PasswordEncoder(BCrypt)
+원문은 모르지만 암호화된 값으로 비교하여 비밀번호를 처리 따라서 사용자를 제외하고는 암호를 알 수 없다.
+
+1. security-context.xml
+```
+<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+```
+2. SecurityTests
+```
+ @Test
+    public void testMember() {
+
+        String pw = "member";
+
+        String enPW = pwEncoder.encode(pw);
+
+        log.info(enPW);
+    }
+    
+    @Test
+    public void testMatch() {
+    	String secret = "$2a$10$sopMQgBXCckrppYyLHGCEexuYLDJIDk5KfNZcBBqaz6jMNXGYHlS2";
+    	
+    	boolean result = pwEncoder.matches("member", secret);
+
+    	log.info(result);
+    }
+```
 
