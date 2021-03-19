@@ -1,0 +1,58 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="0319:war exploded">
+    <output-path>$PROJECT_DIR$/target/controller-1.0.0-BUILD-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>0319</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="0319" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.3" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.6" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.6.6" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.6.6" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.6" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:2.0.6" />
+          <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:3.4.5" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.23" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:2.0.1.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator:6.1.0.Final" />
+          <element id="library" level="project" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.3.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.0" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.9.6" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.6" />
+          <element id="library" level="project" name="Maven: net.coobird:thumbnailator:0.4.14" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/controller-1.0.0-BUILD-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="0319/web/Web" />
+    </root>
+  </artifact>
+</component>
