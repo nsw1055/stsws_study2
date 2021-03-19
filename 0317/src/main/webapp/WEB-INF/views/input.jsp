@@ -46,11 +46,10 @@ pageEncoding="UTF-8"%>
 
     const inputOri = document.querySelector("input[name='uploadFile']");
 
+    console.dir(inputOri)
     const cloneInput = inputOri.outerHTML
 
     // console.dir(inputOri.outerHTML)
-
-
 
     document.querySelector("#uploadBtn").addEventListener("click", function(){
         const input = document.querySelector("input[name='uploadFile']");
@@ -70,11 +69,14 @@ pageEncoding="UTF-8"%>
         }).then(res => res.json())
             .then(jsonObj => {
         	// console.log(jsonObj)
-        	
+
         	let htmlCode = "";
         	for (let i = 0; i < jsonObj.length; i++) {
 				let fileObj = jsonObj[i];
                 arr.push(fileObj)
+                console.dir(fileObj)
+                console.log("===================================")
+                console.dir(JSON.stringify(fileObj))
 				console.log(fileObj.thumbLink)
 				htmlCode += "<li id ='li_"+fileObj.uuid+"'><img src='/view?file="+fileObj.thumbLink+"'><button onclick='removeFile("+JSON.stringify(fileObj)+")'>DEL</button></li>"
 			}
@@ -89,7 +91,7 @@ pageEncoding="UTF-8"%>
     }, false)
 
     function removeFile(param) {
-        console.log(param)
+        console.dir(param)
 
         fetch("/removeFile",
             {

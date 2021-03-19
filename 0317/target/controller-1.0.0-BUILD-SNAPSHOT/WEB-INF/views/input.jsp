@@ -20,7 +20,11 @@ pageEncoding="UTF-8"%>
 </ul>
 
 <script>
+    function test(){
+        var arr = []
 
+        return arr;
+    }
     document.querySelector("#saveBtn")
         .addEventListener("click", function(e){
 
@@ -30,7 +34,7 @@ pageEncoding="UTF-8"%>
                 title:"Title",
                 content:"Content",
                 writer:"user00",
-                fileList: arr}
+                fileList: test()}
 
             fetch("/board/register",
                 {
@@ -40,17 +44,16 @@ pageEncoding="UTF-8"%>
                 })
 
         }, false);
-    const arr = []
+
 
 	const uploadUL = document.querySelector(".uploadResult")
 
     const inputOri = document.querySelector("input[name='uploadFile']");
 
+    console.dir(inputOri)
     const cloneInput = inputOri.outerHTML
 
     // console.dir(inputOri.outerHTML)
-
-
 
     document.querySelector("#uploadBtn").addEventListener("click", function(){
         const input = document.querySelector("input[name='uploadFile']");
@@ -59,6 +62,9 @@ pageEncoding="UTF-8"%>
         const files = input.files;
 
         // console.dir(input);
+
+
+        //const arr = []
 
         for(let i = 0; i < files.length; i++){
             formData.append("files", files[i]);
@@ -70,11 +76,15 @@ pageEncoding="UTF-8"%>
         }).then(res => res.json())
             .then(jsonObj => {
         	// console.log(jsonObj)
-        	
+        	const arr2 = test()
         	let htmlCode = "";
         	for (let i = 0; i < jsonObj.length; i++) {
 				let fileObj = jsonObj[i];
-                arr.push(fileObj)
+                arr2.push(fileObj)
+                console.log(arr2)
+                console.dir(fileObj)
+                console.log("===================================")
+                console.dir(JSON.stringify(fileObj))
 				console.log(fileObj.thumbLink)
 				htmlCode += "<li id ='li_"+fileObj.uuid+"'><img src='/view?file="+fileObj.thumbLink+"'><button onclick='removeFile("+JSON.stringify(fileObj)+")'>DEL</button></li>"
 			}
@@ -88,8 +98,18 @@ pageEncoding="UTF-8"%>
         })
     }, false)
 
-    function removeFile(param) {
-        console.log(param)
+    function removeFile(param){
+
+        console.dir(param)
+
+        removeFile1(param)
+
+    }
+
+    function removeFile1(param) {
+        console.dir(param)
+
+
 
         fetch("/removeFile",
             {
@@ -99,6 +119,9 @@ pageEncoding="UTF-8"%>
             })
         document.querySelector("#li_"+ param.uuid).remove()
     }
+
+
+
 
 </script>
 </body>
