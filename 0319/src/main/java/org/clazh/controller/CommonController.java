@@ -17,4 +17,18 @@ public class CommonController {
         model.addAttribute("msg", "권한이 없는 사용자 입니다.");
     }
 
+    @GetMapping("/customLogin")
+    public void loginPage(String error, String logout, Model model) {
+        log.info("error: "+error);
+        log.info("logout: "+ logout);
+
+        //로그아웃
+        if(logout != null){
+            model.addAttribute("logout", "Logout!!!!");
+        }
+    }
+    @GetMapping("/customLogout")
+    public void customLogout(){
+
+    }
 }
