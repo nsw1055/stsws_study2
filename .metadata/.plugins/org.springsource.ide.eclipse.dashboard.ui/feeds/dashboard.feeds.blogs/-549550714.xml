@@ -5,7 +5,29 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-03-18T20:58:00Z</updated>
+  <updated>2021-03-19T07:30:00Z</updated>
+  <entry>
+    <title>Spring Boot 2.5.0-M3 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/03/19/spring-boot-2-5-0-m3-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Phil Webb</name>
+    </author>
+    <id>tag:spring.io,2021-03-19:4395</id>
+    <updated>2021-03-19T07:30:00Z</updated>
+    <content type="html">&lt;p&gt;I am pleased to announce that the third milestone of Spring Boot 2.5 has been released and is available from our &lt;a href="https://repo.spring.io/milestone/"&gt;milestone repository&lt;/a&gt;. This release &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.5.0-M3"&gt;adds a number of new features and bug fixes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Highlights of this milestone include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;OpenMetrics support for Prometheus&lt;/li&gt;
+  &lt;li&gt;Support for environment variable prefixes&lt;/li&gt;
+  &lt;li&gt;More Buildpack updates&lt;/li&gt;
+  &lt;li&gt;A fresh new look for the &lt;a href="https://docs.spring.io/spring-boot/docs/2.5.0-M3/reference/html/"&gt;docs&lt;/a&gt; (including a &amp;ldquo;dark theme&amp;rdquo;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a complete list of changes and upgrade instructions, please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.5.0-M3-Release-Notes"&gt;Spring Boot 2.5-M3 Release Notes&lt;/a&gt; on the wiki and the &lt;a href="https://docs.spring.io/spring-boot/docs/2.5.0-M3/reference/html/"&gt;updated reference documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you want to get started with 2.5 and try out the new features, you can bootstrap a new project on &lt;a href="https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.5.0.M3&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=demo&amp;name=demo&amp;description=Demo%20project%20for%20Spring%20Boot&amp;packageName=com.example.demo"&gt;start.spring.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.5.0-M2/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: fellow Java champion and legend Angie Jones</title>
     <link rel="alternate" href="https://spring.io/blog/2021/03/18/a-bootiful-podcast-fellow-java-champion-and-legend-angie-jones" />
@@ -113,6 +135,196 @@ Artem&lt;/p&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/issues"&gt;GitHub Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud 2020.0.2 (aka Ilford) Is Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/03/18/spring-cloud-2020-0-2-aka-ilford-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Spencer Gibb</name>
+    </author>
+    <id>tag:spring.io,2021-03-18:4391</id>
+    <updated>2021-03-18T13:56:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that Service Release 2 of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud 2020.0&lt;/a&gt; Release Train (2020.0.2) is available today. The release can be found in &lt;a href="https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-dependencies/2020.0.2/"&gt;Maven Central&lt;/a&gt;. You can check out the 2020.0 &lt;a href="https://github.com/spring-projects/spring-cloud/wiki/Spring-Cloud-2020.0-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-the-2020-0-2-release-train" class="anchor" name="notable-changes-in-the-2020-0-2-release-train"&gt;&lt;/a&gt;Notable Changes in the 2020.0.2 Release Train&lt;/h2&gt;
+&lt;p&gt;This release was primarliy for bug fixes and dependency upgrades.&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2020.0-Release-Notes#known-issues"&gt;this page&lt;/a&gt; for a list of Known Issues.&lt;/p&gt;
+&lt;p&gt;See the &lt;a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2020.0-Release-Notes#breaking-changes"&gt;wiki&lt;/a&gt; for a list of all breaking changes in this release train.&lt;/p&gt;
+&lt;p&gt;See all of the included issues and pull requests at the &lt;a href="https://github.com/orgs/spring-cloud/projects/53"&gt;Github project&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-commons" class="anchor" name="spring-cloud-commons"&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hint-based instance selection for SC LoadBalancer added (&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/issues/672"&gt;#672&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Request-based sticky-session support added in blocking LoadBalancer client (&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/issues/901"&gt;#901&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-config" class="anchor" name="spring-cloud-config"&gt;&lt;/a&gt;Spring Cloud Config&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;TLS support added when using &lt;code&gt;ConfigData&lt;/code&gt; (&lt;a href="https://github.com/spring-cloud/spring-cloud-config/issues/1689"&gt;#1689&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-consul" class="anchor" name="spring-cloud-consul"&gt;&lt;/a&gt;Spring Cloud Consul&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Retry support was added for &lt;code&gt;spring.config.import=consul:&lt;/code&gt;. (&lt;a href="https://github.com/spring-cloud/spring-cloud-consul/issues/703"&gt;#703&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Attempts regegistration if the service is deregistered from local agent. (&lt;a href="https://github.com/spring-cloud/spring-cloud-consul/issues/703"&gt;#703&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Adds support for multiple default query tags. (&lt;a href="https://github.com/spring-cloud/spring-cloud-consul/pull/684"&gt;#684&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-gateway" class="anchor" name="spring-cloud-gateway"&gt;&lt;/a&gt;Spring Cloud Gateway&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support added for adding service instance id cookies (&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/issues/2070"&gt;#2070&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;HttpClient&lt;/code&gt; proxy type is customizable. (&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/issues/2140"&gt;#2140&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-function" class="anchor" name="spring-cloud-function"&gt;&lt;/a&gt;Spring Cloud Function&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improved RSocket Support with added ability to send and receive Spring &lt;code&gt;Message&lt;/code&gt; as well as additional routing mechanism via user provided callback&lt;/li&gt;
+  &lt;li&gt;New and improved &lt;a href="https://github.com/spring-cloud/spring-cloud-function/blob/master/spring-cloud-function-adapters/spring-cloud-function-adapter-azure/src/main/java/org/springframework/cloud/function/adapter/azure/FunctionInvoker.java"&gt;FunctionInvoker&lt;/a&gt; for Microsoft Azure adapter with &lt;a href="https://github.com/spring-cloud/spring-cloud-function/blob/master/spring-cloud-function-samples/function-sample-azure/src/main/java/example/UppercaseHandler.java"&gt;updated sample&lt;/a&gt; showcasing it&amp;rsquo;s usage.&lt;/li&gt;
+  &lt;li&gt;Initial support for Kotlin Coroutines? (thanks to Adrien Poupard).&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-kubernetes" class="anchor" name="spring-cloud-kubernetes"&gt;&lt;/a&gt;Spring Cloud Kubernetes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Add the ability to configure the primary port used for a service (&lt;a href="https://github.com/spring-cloud/spring-cloud-kubernetes/issues/733"&gt;#733&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Update Kubernetes Java Client To 11.0.1 (&lt;a href="https://github.com/spring-cloud/spring-cloud-kubernetes/pull/708"&gt;#708&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-circuitbreaker" class="anchor" name="spring-cloud-circuitbreaker"&gt;&lt;/a&gt;Spring Cloud CircuitBreaker&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Add the ability to use Resilience4J Bulkhead module (&lt;a href="https://github.com/spring-cloud/spring-cloud-circuitbreaker/issues/86"&gt;#86&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add the ability to configure Resilience4J via configuration properties (&lt;a href="https://github.com/spring-cloud/spring-cloud-circuitbreaker/issues/61"&gt;#61&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-openfeign" class="anchor" name="spring-cloud-openfeign"&gt;&lt;/a&gt;Spring Cloud OpenFeign&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Micrometer support added (&lt;a href="https://github.com/spring-cloud/spring-cloud-openfeign/issues/457"&gt;#457&lt;/a&gt;, &lt;a href="https://github.com/spring-cloud/spring-cloud-openfeign/pull/462"&gt;#462&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-sleuth" class="anchor" name="spring-cloud-sleuth"&gt;&lt;/a&gt;Spring Cloud Sleuth&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;SleuthFeignBuilder&lt;/code&gt; now allows the ability to provide a custom &lt;code&gt;delegate&lt;/code&gt; (&lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth/issues/1865"&gt;#1865&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr/&gt;
+&lt;p&gt;The following modules were updated as part of 2020.0.2:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Module &lt;/th&gt;
+      &lt;th&gt;Version &lt;/th&gt;
+      &lt;th&gt;Issues&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Bus &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Circuitbreaker &lt;/td&gt;
+      &lt;td&gt;2.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Cli &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Cloudfoundry &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Commons &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Config &lt;/td&gt;
+      &lt;td&gt;3.0.3 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Consul &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Contract &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Gateway &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Kubernetes &lt;/td&gt;
+      &lt;td&gt;2.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Netflix &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Openfeign &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Sleuth &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Task &lt;/td&gt;
+      &lt;td&gt;2.3.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Vault &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Zookeeper &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As always, we welcome feedback on &lt;a href="https://github.com/spring-cloud/"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt;, on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To get started with Maven with a BOM (dependency management only):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&amp;lt;dependencyManagement&amp;gt;&#xD;
+    &amp;lt;dependencies&amp;gt;&#xD;
+        &amp;lt;dependency&amp;gt;&#xD;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+            &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+            &amp;lt;version&amp;gt;2020.0.2&amp;lt;/version&amp;gt;&#xD;
+            &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+            &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+        &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+&amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-client&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    ...&#xD;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint groovy"&gt;buildscript {&#xD;
+  dependencies {&#xD;
+    classpath &amp;quot;io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE&amp;quot;&#xD;
+  }&#xD;
+}&#xD;
+&#xD;
+apply plugin: &amp;quot;io.spring.dependency-management&amp;quot;&#xD;
+&#xD;
+dependencyManagement {&#xD;
+  imports {&#xD;
+    mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:2020.0.2&amp;#39;&#xD;
+  }&#xD;
+}&#xD;
+&#xD;
+dependencies {&#xD;
+  compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
+  compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-client&amp;#39;&#xD;
+  //...&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>
@@ -926,41 +1138,6 @@ Artem&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Spring legend  Greg Turnquist  on Spring Data REST, HATEOAS, CI, and so much more.</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/02/25/a-bootiful-podcast-spring-legend-greg-turnquist-on-spring-data-rest-hateoas-ci-and-so-much-more" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-02-26:4375</id>
-    <updated>2021-02-26T00:27:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Spring legend &lt;a href="http://twitter.com/gregturn"&gt;Greg Turnquist (@gregturn)&lt;/a&gt; about Spring Data REST, HATEOAS, CI, and so much more. &lt;/p&gt;
-&lt;iframe title="Spring legend Greg Turnquist on Spring Data REST, HATEOAS, continuous integration and so much more" height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/zamgb-fbea54?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tips: Spring Cloud Gateway (Redux)</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/02/23/spring-tips-spring-cloud-gateway-redux" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-02-24:4374</id>
-    <updated>2021-02-24T03:50:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment of Spring Tips, I revisit Spring Cloud Gateway. &lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/puIJ1Mn9_LE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;Here&amp;rsquo;s what&amp;rsquo;s inside: &lt;/p&gt;&lt;h2&gt;&lt;a href="#intro" class="anchor" name="intro"&gt;&lt;/a&gt;Intro&lt;/h2&gt;
-&lt;p&gt;11:12? Have your cake and Eat it too with an API Gateway&lt;/p&gt;&lt;h2&gt;&lt;a href="#basics" class="anchor" name="basics"&gt;&lt;/a&gt;Basics&lt;/h2&gt;
-&lt;p&gt;00:11:37? Get to Know Your New Gateway&lt;br/&gt;00:21:18? The Observable Gateway&lt;br/&gt;00:22:39? Meet The Supporting Characters&lt;br/&gt;00:24:30? Reactive Data For The Demo&lt;br/&gt;00:28:10? A Reactive WebSocket Endpoint&lt;br/&gt;00:31:00? Reactive HTTP Endpoint&lt;/p&gt;&lt;h2&gt;&lt;a href="#behind-the-source-with-spring-cloud-co-founder-lead-and-spring-cloud-gateway-creator-spencer-gibb" class="anchor" name="behind-the-source-with-spring-cloud-co-founder-lead-and-spring-cloud-gateway-creator-spencer-gibb"&gt;&lt;/a&gt;Behind the Source with Spring Cloud co-founder, lead, and Spring Cloud Gateway creator Spencer Gibb&lt;/h2&gt;
-&lt;p&gt;00:33:00? Spencer Gibb&lt;/p&gt;&lt;h2&gt;&lt;a href="#service-discovery" class="anchor" name="service-discovery"&gt;&lt;/a&gt;Service Discovery&lt;/h2&gt;
-&lt;p&gt;37:59? Introducing Spring Cloud Netflix Eureka&lt;br/&gt;40:49? Integrating Service Discovery into our Gateway&lt;br/&gt;43:01? Load Balanced URIs&lt;br/&gt;45:49? Route Events&lt;/p&gt;&lt;h2&gt;&lt;a href="#configuration" class="anchor" name="configuration"&gt;&lt;/a&gt;Configuration&lt;/h2&gt;
-&lt;p&gt;48:19? A Route By Any Other Name&lt;br/&gt;53:10? Yet another markup language (YAML)&lt;br/&gt;55:55? Using the Spring Cloud Config Server&lt;br/&gt;01:02? Reloading Configuration with the /refresh Actuator &lt;/p&gt;&lt;h2&gt;&lt;a href="#reliability" class="anchor" name="reliability"&gt;&lt;/a&gt;Reliability&lt;/h2&gt;
-&lt;p&gt;01:09:02? Protect Your Microservices&lt;br/&gt;01:10:43? If At First You Don&amp;rsquo;t Succeed, &lt;code&gt;Retry()&lt;/code&gt;&lt;br/&gt;01:18:00? Circuit Breakers&lt;br/&gt;01:22:35? Rate Limiters &lt;/p&gt;&lt;h2&gt;&lt;a href="#behind-the-source-with-spring-cloud-gateway-for-kubernetes-lead-chris-sterling" class="anchor" name="behind-the-source-with-spring-cloud-gateway-for-kubernetes-lead-chris-sterling"&gt;&lt;/a&gt;Behind The Source with Spring Cloud Gateway For Kubernetes Lead Chris Sterling&lt;/h2&gt;
-&lt;p&gt;01:35:38? Chris Sterling &lt;/p&gt;&lt;h2&gt;&lt;a href="#the-final-word" class="anchor" name="the-final-word"&gt;&lt;/a&gt;The Final Word&lt;/h2&gt;
-&lt;p&gt;01:38:32? This Tutorial Is Done, But The&lt;br/&gt;journey To Production Continues&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
