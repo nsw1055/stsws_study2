@@ -232,3 +232,152 @@ security-context
     }
 ```
 
+
+---
+# 2일차
+  
+403: 접근 권한 없음 
+
+username   -> 		시큐리티
+사용자	<-		
+-> password -> 권한(인가)
+  (패스워드 인코딩)
+  
+인증 매니저 -> 인증 제공자 -> 인증 서비스 -> custom
+
+
+
+1. root-context.xml
+```
+<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/dclass?serverTimezone=UTC"></property>
+		<property name="username" value="springuser"></property>
+		<property name="password" value="springuser"></property>
+	</bean>
+
+	<!-- HikariCP configuration -->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+```
+2. test로 정상 작동 되는지 확인
+3. domain 설정
+```
+@Data
+public class AuthVO {
+
+    private String userid;
+    private String auth;
+
+}
+```
+
+```
+@Data
+public class MemberVO {
+
+    private String userid;
+    private String userpw;
+    private String userName;
+    private boolean enabled;
+
+    private Date regDate;
+    private Date updateDate;
+    private List<AuthVO> authList;
+}
+```
+4. mapper 작성
+```
+public interface MemberMapper {
+
+    MemberVO read(String userid);
+}
+```
+
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.clazh.mapper.MemberMapper">
+
+
+  <resultMap type="org.clazh.domain.MemberVO" id="memberMap">
+    <id property="userid" column="userid"/>
+    <result property="userid" column="userid"/>
+    <result property="userpw" column="userpw"/>
+    <result property="userName" column="username"/>
+    <result property="regDate" column="regdate"/>
+    <result property="updateDate" column="updatedate"/>
+    <collection property="authList" resultMap="authMap">
+    </collection> 
+  </resultMap>
+  
+  <resultMap type="org.clazh.domain.AuthVO" id="authMap">
+    <result property="userid" column="userid"/>
+    <result property="auth" column="auth"/>
+  </resultMap>
+  
+  <select id="read" resultMap="memberMap">
+SELECT 
+  mem.userid,  userpw, username, enabled, regdate, updatedate, auth
+FROM 
+  tbl_member mem LEFT OUTER JOIN tbl_member_auth auth on mem.userid = auth.userid 
+WHERE mem.userid = #{userid}
+  </select>
+
+</mapper>
+```
+
+5. xml
+```
+	<bean id="sqlSessionFactory"
+		  class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<bean id="transactionManager"
+		  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<tx:annotation-driven />
+
+	<mybatis-spring:scan
+			base-package="org.clazh.mapper" />
+```
+
+6. test
+7. CustomUserDetailsService
+```
+@Log4j
+public class CustomUserDetailsService implements UserDetailsService {
+
+    @Setter(onMethod_ = {@Autowired})
+    private MemberMapper memberMapper;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+        log.info("Load user By UserName: " + username);
+
+        return null;
+    }
+}
+```
+8. security-context
+```
+<bean id="customDetailsService" class="org.clazh.security.CustomUserDetailsService"></bean>
+```
+```
+</security:http>
+<security:authentication-manager>
+	<security:authentication-provider user-service-ref="customDetailsService">
+		<security:password-encoder ref="bcryptPasswordEncoder" />
+	</security:authentication-provider>
+</security:authentication-manager>
+```
+
+9.  실행시 오류
+![image](https://user-images.githubusercontent.com/72544949/111932180-43483a80-8b00-11eb-8fe1-bfc1deee5e7d.png)
