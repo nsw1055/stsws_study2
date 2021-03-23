@@ -1,5 +1,0 @@
-package org.clazh.mapper;
-
-public interface SampleMapper {
-
-}
